@@ -1,0 +1,34 @@
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 120
+
+[tool.poetry]
+name = "rl-warmups"
+version = "0.1.0"
+description = ""
+authors = ["Michael Wayman <michaelwayman@gmail.com>"]
+readme = "README.md"
+packages = [{include = "rl_warmups"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+gymnasium = "^0.27.0"
+numpy = "^1.23.5"
+pygame = "^2.1.2"
+box2d-py = "^2.3.8"
+tensorboard = "^2.11.0"
+optuna = "^3.0.4"
+optuna-dashboard = "^0.8.0"
+torch = "^1.13.1"
+rich = "^13.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+isort = "^5.11.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
